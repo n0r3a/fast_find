@@ -1,6 +1,5 @@
-# fast_find
-
-**a fast terminal-based file search utility for Linux. it uses lua's speed to search an instant-loading cache of your entire system instead of scanning your hard drive every time**
+### fast_find
+ 
 
 ```
 how it works:
@@ -10,7 +9,7 @@ the script uses two steps to achieve its speed:
 ```
 
 
-# arguments
+### arguments
 ```
 $ lua fast_find.lua --rebuild
 deletes the old cache file and indexes the entire system (/) to create a fresh list (required for first use)
