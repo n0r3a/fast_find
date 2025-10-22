@@ -6,9 +6,7 @@ local TARGET_DIR = "/"
 local CACHE_FILE = os.getenv("HOME") .. "/.find_cache.lua"
 local DEFAULT_MAX_RESULTS = 0
 
--- utility Functions
-
--- function to save the file list as a valid Lua table file
+-- function to save the file list as a valid lua table file
 local function print_table_to_file(t)
     local f = io.open(CACHE_FILE, "w")
     if not f then
