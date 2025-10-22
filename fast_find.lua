@@ -3,8 +3,8 @@
 
 -- configuration
 local TARGET_DIR = "/"
-local CACHE_FILE = os.getenv("HOME") .. "/.lua_find_cache.lua"
-local DEFAULT_MAX_RESULTS = 0 -- CHANGED: Default is now 0 (NO LIMIT)
+local CACHE_FILE = os.getenv("HOME") .. "/.find_cache.lua"
+local DEFAULT_MAX_RESULTS = 0
 
 -- utility Functions
 
