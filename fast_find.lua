@@ -1,4 +1,4 @@
--- lua_fast_find.lua: A fast, cached file search utility for Linux.
+-- lua_fast_find.lua: a fast cached file search utility for Linux.
 -- made by n0r3a
 
 -- configuration
