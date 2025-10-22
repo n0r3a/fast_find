@@ -1,45 +1,18 @@
- Fast Find (lua_fast_find.lua)
+fast_find
 
-A lightning-fast, terminal-based file search utility for Linux. It uses Lua's unique speed advantage to search an instant-loading cache of your entire system instead of scanning your hard drive every time.
+a fast terminal-based file search utility for Linux. it uses lua's speed to search an instant-loading cache of your entire system instead of scanning your hard drive every time
 
-How It Works (The Speed Secret)
 
-The script uses a simple two-step process to achieve its speed:
+how it works:
+the script uses two steps to achieve its speed:
+1.) search: the collected data is saved as a special lua data structure (a table)
+2.) when you search, lua loads this entire file list instantly into memory using dofile(), making searches almost immediate
 
-Build (Slow, Once): When you run --rebuild, the script runs a standard system find command to collect all file paths on your system.
 
-Search (Instant, Every Time): The collected data is saved as a special Lua data structure (a table). When you search, Lua loads this entire file list instantly into memory using dofile(), making searches near-immediate.
+arguments
 
-usage and commands
+lua fast_find.lua --rebuild | deletes the old cache file and indexes the entire system (/) to create a fresh list (required for first use)
 
-command structure
+lua fast_find.lua "my_notes" | the string to search for within file paths (case-insensitive)
 
-argument
-
-purpose
-
-example
-
-lua lua_fast_find.lua
-
---rebuild (Required for first use)
-
-slow, one-time setup. indexes the entire system (/) and saves the fast cache file.
-
-lua lua_fast_find.lua --rebuild
-
-lua lua_fast_find.lua
-
-<query>
-
-The string to search for within file paths (case-insensitive).
-
-lua lua_fast_find.lua "my_notes"
-
-lua lua_fast_find.lua
-
-<query> [limit]
-
-Search, but limit the output to a specific number. The default limit is 0 (show all results).
-
-lua lua_fast_find.lua "config" 100
+lua fast_find.lua "conf" 100 | search, but limit the output to a specific number (the default limit is 0 = show all results)
